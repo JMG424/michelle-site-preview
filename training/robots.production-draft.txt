@@ -1,0 +1,7 @@
+# Draft robots.txt for michellegaloobtraining.com (the live site has none — /robots.txt returns the app HTML)
+User-agent: *
+Disallow: /admin
+Disallow: /api/
+Disallow: /*/success
+Disallow: /*/checkout
+Sitemap: https://michellegaloobtraining.com/sitemap.xml

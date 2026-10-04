@@ -41,3 +41,88 @@ article.quote .pill{font-size:10px;margin-bottom:10px}
 }
 .wrap.split{gap:44px;align-items:center}
 .hero .eyebrow{color:#eee}.hero .lead{border-top:1px solid rgba(255,255,255,.5);padding-top:12px}
+
+/* ===== Mobile pass (Oct 4, 2026): phones 375–430px. Only affects /combined/ (this file isn't loaded by /main/ or /training/). ===== */
+html,body{overflow-x:clip}
+.menu-btn .bars{display:none}
+@media (max-width:900px){
+ /* compact banner: one short line on phones (full text stays in the page, shown from 641px up) */
+ .preview-banner.mock{font-size:12px;padding:0 10px;line-height:1.3;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;column-gap:4px}
+ .preview-banner.mock a{display:inline-block;padding:12px 4px}
+ /* header + hamburger */
+ .hdr{padding:6px 16px;min-height:60px}
+ .hdr .logo{display:block;padding:6px 0}
+ .menu-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;min-width:44px;padding:0 14px;font-size:16px;color:#000;background:#fff;border-radius:8px}
+ .menu-btn .bars{display:block;width:18px;height:2px;background:#000;position:relative}
+ .menu-btn .bars:before,.menu-btn .bars:after{content:"";position:absolute;left:0;width:18px;height:2px;background:#000}
+ .menu-btn .bars:before{top:-6px}.menu-btn .bars:after{top:6px}
+ .menu-btn[aria-expanded=true] .bars{background:transparent}
+ .menu-btn[aria-expanded=true] .bars:before{top:0;transform:rotate(45deg)}.menu-btn[aria-expanded=true] .bars:after{top:0;transform:rotate(-45deg)}
+ nav.main.open{max-height:calc(100vh - 60px);overflow-y:auto;box-shadow:0 12px 24px rgba(0,0,0,.08)}
+ nav.main ul{padding:4px 20px 14px}
+ nav.main li a{display:flex;align-items:center;min-height:48px;padding:0;font-size:17px;border-bottom:1px solid #f0f0f0}
+ nav.main ul.sub{padding:0 0 0 16px;border-left:2px solid var(--lav);margin:4px 0 6px}
+ nav.main ul.sub a{min-height:44px;padding:0;font-size:16px;color:#333}
+ nav.main ul.sub li:last-child a{border-bottom:0}
+ /* readable text */
+ body{font-size:17px;line-height:1.65}
+ .small,.vcap,.card .meta,.quote footer,.certs figure,figcaption,.trust,.vs,.summary dd,.hero p.small{font-size:16px}
+ .eyebrow{font-size:13px}.pill{font-size:12px}
+ .confirm{font-size:14px}
+ .trust{padding:14px 0}.trust ul{flex-direction:column;gap:6px;padding:0 20px}
+ h1{font-size:clamp(28px,7.6vw,34px);line-height:1.18}
+ h2{font-size:clamp(23px,6.2vw,28px)}
+ /* breadcrumbs: off the screen edge, tappable */
+ .crumbs{padding:4px 20px 0}.crumbs a{display:inline-block;padding:12px 2px}
+ /* buttons: full width, >=48px tall, spaced when stacked */
+ main .btn{display:flex;width:100%;min-height:48px;align-items:center;justify-content:center;flex-direction:column;padding:12px 20px;font-size:16px}
+ main .btn+.btn{margin-top:12px}
+ main .btn-sm{min-height:48px}
+ .hero .ctas{flex-direction:column;gap:12px;margin-top:20px}.hero .ctas .btn+.btn{margin-top:0}
+ .path .btns{flex-direction:column}.path .btns .btn+.btn{margin-top:0}
+ .pod .links{flex-direction:column;gap:10px}.pod .links .btn+.btn{margin-top:0}
+ .pod{padding:22px 0}
+ /* cards/grids stack into single-column cards */
+ .grid{gap:18px}.paths{gap:18px}
+ .path{padding:24px 20px}.card{padding:24px 18px}.price-card{padding:28px 18px 22px}
+ .panel{padding:32px 16px}
+ .quote{padding:20px}
+ .wrap.split{gap:24px}
+ .split .img{max-height:300px}
+ .hero-split .img{order:1}
+ .hero-split .txt{padding-top:20px}
+ .hero{min-height:0}.hero .wrap{padding-top:40px;padding-bottom:40px}
+ .summary{padding:18px 16px}
+ .ba{gap:8px;margin:10px 0}.ba div{padding:14px}
+ .vs td{padding:10px 2px}
+ /* FAQ: tap-to-expand rows with a full-height target */
+ .faq details{padding:0}
+ .faq summary{display:flex;align-items:center;min-height:52px;padding:12px 36px 12px 0;font-size:17px;line-height:1.35}
+ .faq summary:after{top:50%;transform:translateY(-50%)}
+ .faq details p{margin:0 0 16px}
+ /* contact + footer: tappable links */
+ .contact .cols{gap:20px}
+ .social{flex-wrap:wrap;gap:4px 18px}.social a{display:inline-block;padding:12px 0}
+ footer.site{padding:24px 0}
+ footer.site .cols{flex-direction:column;gap:12px}
+ footer.site .cols>div a{display:inline-block;padding:11px 0}
+ footer.site ul{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+ footer.site ul a{display:flex;align-items:center;min-height:44px}
+ /* sticky Book / Call bar: never covers content, respects the iPhone home indicator */
+ .sticky-cta{padding:8px 12px calc(8px + env(safe-area-inset-bottom));gap:10px;box-shadow:0 -4px 14px rgba(0,0,0,.06)}
+ .sticky-cta .btn{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 12px;font-size:16px}
+ body{padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+ /* media scale to width */
+ img,video,iframe{max-width:100%}
+ .vfacade:after{width:56px;height:56px;margin:-28px 0 0 -28px}
+}
+@media (max-width:640px){
+ .preview-banner.mock .bn-more{display:none}
+}
+@media (max-width:900px){
+ .preview-banner.mock{letter-spacing:0;font-size:11.5px}
+ .preview-banner.mock a{padding:14px 3px}
+ footer.site .cols>div a{padding:12px 0}
+ .hero p[style]{font-size:16px!important}
+}
+@media (max-width:900px){.hero .wrap{padding-top:28px;padding-bottom:32px}.hero .eyebrow{letter-spacing:.16em}}

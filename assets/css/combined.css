@@ -1,0 +1,43 @@
+/* /combined/ mockup — loaded AFTER main.css. Adds the shared Training dropdown, a few training-page components restyled in the michellegaloob.com palette, and the yellow TO CONFIRM notes. */
+.preview-banner.mock{background:#3b2a3a}
+nav.main li.has-sub{position:relative}
+nav.main li.has-sub>a:after{content:" ▾";font-size:11px}
+nav.main ul.sub{display:none;position:absolute;left:-14px;top:100%;flex-direction:column;gap:0;background:#fff;border:1px solid #eee;box-shadow:0 8px 24px rgba(0,0,0,.08);padding:8px 0;min-width:240px;z-index:70}
+nav.main ul.sub a{display:block;padding:8px 16px;white-space:nowrap}
+nav.main li.has-sub:hover>ul.sub,nav.main li.has-sub:focus-within>ul.sub{display:flex}
+.confirm{background:#fff8c5;border:1px solid #e6c700;border-left:5px solid #e6c700;color:#4d3d00;font:400 13px/1.45 Arial,sans-serif;padding:8px 12px;margin:10px 0;border-radius:4px}
+.confirm strong{letter-spacing:.06em}
+.hero .confirm{max-width:520px}
+.narrow{max-width:820px}.muted{color:var(--muted)}.small{font-size:14px}.accent{color:var(--lav-d)}
+.hero .accent{color:#d9d9ff}
+.soft{background:#fafafe}.soft2{background:var(--bg2)}
+h2.it{font-style:italic}
+.g4{grid-template-columns:repeat(4,1fr)}
+.pill{display:inline-block;background:var(--plum);color:#fff;border-radius:999px;padding:4px 14px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.btn-big{padding:16px 36px;font-size:17px}.btn-big small{display:block;font-size:12px;opacity:.85;margin-top:4px}
+.step{text-align:left}.step .num{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--plum);font-weight:700}
+.step .btn{margin-top:6px}
+.lead{font-size:21px}
+.ba{display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;margin:14px 0}
+.ba div{padding:18px;font-size:15px}.ba .b{background:#f4f4f4}.ba .a{background:#f0eefb}
+.ba small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:700}
+ul.stars{list-style:none;padding:0}ul.stars li{padding:5px 0 5px 26px;position:relative}ul.stars li:before{content:"✦";position:absolute;left:3px;color:var(--lav)}
+ul.x{list-style:none;padding:0;color:var(--muted)}ul.x li{padding:4px 0 4px 26px;position:relative}ul.x li:before{content:"✕";position:absolute;left:4px}
+.price-card{border:1px solid var(--line);padding:30px;background:#fff;position:relative}
+.price-card .tag{position:absolute;top:-12px;left:24px}
+.price-card .price{font-size:42px;margin:4px 0}
+.vs{width:100%;border-collapse:collapse;font-size:15px}.vs td{padding:9px 4px;border-bottom:1px solid #e6e6e6}.vs td:last-child{text-align:right;white-space:nowrap}.vs tr.t td{font-weight:700;border-bottom:0}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.path{border:1px solid var(--line);padding:32px 28px;background:#fff;display:flex;flex-direction:column}
+.path h3{font-size:24px}.path .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:14px}
+.path ul{padding-left:20px;margin:0 0 10px}
+article.quote .pill{font-size:10px;margin-bottom:10px}
+@media (max-width:900px){
+ nav.main ul.sub{display:flex;position:static;box-shadow:none;border:0;padding:0 0 4px 14px;min-width:0}
+ nav.main ul.sub a{padding:7px 0;font-size:15px;color:#444}
+ nav.main li.has-sub>a:after{content:""}
+ .g4,.paths{grid-template-columns:1fr}.ba{grid-template-columns:1fr}.ba span{display:none}
+ .price-card .price{font-size:36px}
+}
+.wrap.split{gap:44px;align-items:center}
+.hero .eyebrow{color:#eee}.hero .lead{border-top:1px solid rgba(255,255,255,.5);padding-top:12px}

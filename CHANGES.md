@@ -60,3 +60,23 @@ The original Claude Code review from the Mac Studio could not be found. I search
 ## Placeholders (marked in red on the pages)
 - Wix contact form and mailing-list form were not recreated, because they submit to Wix.
 - Email opt-in on the Starter Kit is recommended (existing Kit form) but not wired.
+
+## /combined/: one-domain mockup (added Oct 4, 2026)
+
+This mockup shows both sites merged into one site under the **michellegaloob.com** brand. It uses the same look as `/main/` (main.css, plus a small combined.css). `/main/` and `/training/` are unchanged.
+
+- **Pages:**
+  - Home (shows both paths: Book a Reading, or Learn to trust your intuition)
+  - Readings
+  - Training overview
+  - Training → Free Starter Kit
+  - Training → Intuition Mastery Program
+  - Success Stories (one merged, de-duplicated page)
+  - About
+  - Media
+  - FAQ (both FAQ sets merged)
+- **Navigation:** one shared nav with a Training dropdown, one footer, and a sticky Book / Call bar on phones. The banner reads "Mockup — combined site, not live", and every page has `noindex,nofollow`.
+- **Links:** booking, Calendly, Wix and checkout links are unchanged. Program buttons go to `michellegaloobtraining.com/intuition-mastery#pricing`.
+- **Conflicting facts:** these are flagged with yellow **TO CONFIRM** notes. The mockup uses the 14-day guarantee (some promo pages say 7 days) and keeps "15+ years" (the About story says "about 13 years ago").
+- **Supporting files:** `combined/sitemap.xml` (draft, production URLs), `combined/llms.txt` (merged), `combined/REDIRECTS.md` (redirect map, including the checkout caveat).
+- **Source:** built by `build/build_combined.py`. It reuses the copy and data from the `/main/` and `/training/` builds, so there is no new copy, prices or testimonials.

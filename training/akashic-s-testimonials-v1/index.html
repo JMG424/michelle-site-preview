@@ -35,9 +35,8 @@ fbq('track', 'PageView');
  <div class="atf-copy">
   <p class="eyebrow">Your first reading</p>
   <h1>Your private Akashic Records reading with&nbsp;Michelle</h1>
-  <p class="offer">First reading with Michelle: <span data-price="flash"></span> (first-time discount)</p>
-  <p class="offer-sub">60 minutes on Zoom or phone. First-time clients only.</p>
-  <p class="offer-reg">Regular readings are <span data-price="regular"></span>.</p>
+  <p class="offer">First reading with Michelle: <span data-price="regular"></span> / <span data-price="flash"></span></p>
+  <p class="offer-sub">Regular <span data-price="regular"></span> · first-time <span data-price="flash"></span> · 60 minutes on Zoom or phone</p>
   <a class="btn cta" href="https://calendly.com/michellegaloob-aoy/1-hour-reading-first-time-reading-clone-1">Book my first reading</a>
   <!-- Carole Crist, above the fold on every screen. Quote + title verbatim from michellegaloobtraining.com/flash-sale -->
   <!-- S: Carole Crist's click-to-play video (poster above the fold, so not lazy) beside her quote -->
@@ -107,8 +106,8 @@ fbq('track', 'PageView');
 
 <section class="final"><div class="narrow">
  <h2>Book your first reading</h2>
- <p class="offer">First reading with Michelle: <span data-price="flash"></span> (first-time discount)</p>
- <p class="offer-reg">Regular readings are <span data-price="regular"></span>.</p>
+ <p class="offer">First reading with Michelle: <span data-price="regular"></span> / <span data-price="flash"></span></p>
+ <p class="offer-reg">Regular <span data-price="regular"></span> · first-time price <span data-price="flash"></span></p>
  <a class="btn cta" href="https://calendly.com/michellegaloob-aoy/1-hour-reading-first-time-reading-clone-1">Book my first reading</a>
  <p class="under">60 minutes · Zoom or phone · First-time clients only · Secure booking</p>
 </div></section>
@@ -120,5 +119,14 @@ fbq('track', 'PageView');
  &copy; 2026 Michelle Galoob · <a href="https://michellegaloobtraining.com/privacy-policy">Privacy Policy</a> · <a href="https://michellegaloobtraining.com/terms">Terms</a> · <a href="mailto:hello@michellegaloob.com">Contact</a>
 </footer>
 
+<script>
+(function () {
+  var P = { flash: 285, regular: 375 };
+  document.querySelectorAll('[data-price]').forEach(function (el) {
+    var k = el.getAttribute('data-price');
+    if (P[k] != null) el.textContent = '$' + P[k];
+  });
+})();
+</script>
 <script src="https://michellegaloobtraining.com/fr/static/akashic.js?v=1d95907670"></script>
 </body></html>

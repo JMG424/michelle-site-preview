@@ -1,0 +1,120 @@
+/* Mystery discount — Fishwife structure (sticky pill + modal tease), MGC navy/cream/gold */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+.offer-tag{font-family:'Inter',system-ui,sans-serif;font-size:14px;font-weight:600;color:var(--muted)}
+.mystery-hint{font-size:15px;color:var(--muted);margin:0 0 14px;line-height:1.4}
+.mystery-inline{all:unset;cursor:pointer;color:var(--navy);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.mystery-inline:hover,.mystery-inline:focus-visible{color:var(--gold)}
+.mystery-inline:focus-visible{outline:2px solid var(--gold2);outline-offset:2px}
+
+/* Sticky floating pill (bottom-left) — Fishwife: short label only, no % subline */
+.md-sticky{
+  position:fixed;left:14px;bottom:18px;z-index:90;
+  display:flex;align-items:center;gap:6px;
+  transition:opacity .25s, transform .25s;
+}
+.md-sticky.is-hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+.md-sticky-btn{
+  all:unset;box-sizing:border-box;cursor:pointer;
+  display:inline-flex;align-items:center;
+  background:var(--gold);color:var(--navy);
+  border:2px solid var(--navy);border-radius:999px;
+  padding:11px 18px;
+  box-shadow:0 8px 24px rgba(28,41,68,.28);
+  font-family:'Fraunces',Georgia,serif;
+}
+.md-sticky-btn:hover,.md-sticky-btn:focus-visible{background:var(--gold2)}
+.md-sticky-btn:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.md-sticky-label{font-size:16px;font-weight:600;line-height:1.15;letter-spacing:.01em}
+/* X sits inside the pill row (Fishwife) — separate circle for tap target */
+.md-sticky-x{
+  all:unset;box-sizing:border-box;cursor:pointer;
+  width:28px;height:28px;border-radius:50%;
+  background:var(--navy);color:#fff;font-size:18px;line-height:28px;text-align:center;
+  box-shadow:0 4px 12px rgba(28,41,68,.2);
+  flex-shrink:0;
+}
+.md-sticky-x:hover,.md-sticky-x:focus-visible{background:var(--navy2)}
+.md-sticky-x:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* Modal — Fishwife: Want A Mystery Discount? / email / Continue. No % reveal. */
+.md-modal{
+  position:fixed;inset:0;z-index:120;
+  display:flex;align-items:flex-end;justify-content:center;
+  padding:12px;background:rgba(15,22,38,.72);
+}
+.md-modal[hidden]{display:none!important}
+@media(min-width:560px){.md-modal{align-items:center;padding:24px}}
+.md-dialog{
+  position:relative;width:min(400px,100%);
+  background:linear-gradient(165deg,var(--cream) 0%,var(--cream2) 100%);
+  border:2px solid var(--navy);border-radius:22px;
+  padding:36px 24px 24px;
+  box-shadow:0 24px 60px rgba(15,22,38,.35);
+  max-height:min(92vh,640px);overflow:auto;
+}
+.md-close{
+  all:unset;position:absolute;top:10px;left:12px;cursor:pointer;
+  width:40px;height:40px;border-radius:50%;
+  color:var(--navy);font-size:28px;line-height:40px;text-align:center;
+}
+.md-close:hover,.md-close:focus-visible{background:rgba(28,41,68,.08)}
+.md-close:focus-visible{outline:2px solid var(--gold)}
+.md-title{
+  font-family:'Fraunces',Georgia,serif;font-weight:600;
+  color:var(--navy);font-size:clamp(26px,5.5vw,32px);line-height:1.15;
+  text-align:center;margin:8px 0 12px;
+}
+.md-sub{font-size:15px;color:var(--muted);text-align:center;margin:0 0 20px;line-height:1.45}
+.md-form{display:grid;gap:12px}
+.md-form input{
+  font:inherit;font-size:16px;width:100%;
+  padding:14px 18px;border:1.5px solid #c9beaa;border-radius:999px;
+  background:#fff;color:var(--ink);text-align:center;
+}
+.md-form input:focus{outline:2px solid var(--gold2);border-color:var(--gold)}
+.md-form input::placeholder{color:#9a9080}
+.md-continue{
+  border:2px solid var(--navy)!important;color:var(--navy)!important;
+  background:var(--gold)!important;cursor:pointer;width:100%;font-family:inherit;
+  border-radius:999px!important;padding:14px 18px!important;font-weight:600!important;
+}
+.md-continue:hover{background:var(--gold2)!important}
+.md-err{color:#9b2c2c;font-size:14px;text-align:center;min-height:1.2em;margin:0}
+.md-fine{font-size:12.5px;color:var(--muted);text-align:center;line-height:1.4;margin:4px 0 0}
+.md-book{display:block;width:100%;border:2px solid var(--navy);text-align:center;box-sizing:border-box}
+.md-later{
+  all:unset;display:block;width:100%;margin-top:14px;cursor:pointer;
+  text-align:center;font-size:14px;color:var(--muted);font-weight:600;
+}
+.md-later:hover{color:var(--navy)}
+html.md-lock{overflow:hidden}
+
+body.has-mystery-claimed .mystery-hint{display:none}
+@media(max-width:480px){
+  .md-sticky{left:10px;bottom:14px}
+  .md-sticky-label{font-size:15px}
+  .md-dialog{padding:32px 20px 20px}
+}
+
+
+/* v2.1 list price strikethrough */
+.offer s.list-price{color:var(--muted);font-weight:500;text-decoration:line-through;margin-right:6px}
+.offer s.list-price[data-price]{color:var(--muted)}
+.mystery-hint{font-size:15px;color:var(--ink);margin:0 0 14px;line-height:1.45}
+.mystery-hint .mystery-inline{font-weight:600}
+
+/* v3: no on-page prices; claim CTA is primary */
+.claim-note{font-size:13px;color:var(--muted);margin:10px 0 0;line-height:1.4}
+button.btn.md-primary-claim{width:100%;max-width:420px;border:0;cursor:pointer;font:inherit}
+.final button.btn.md-primary-claim{display:block;margin-left:auto;margin-right:auto}
+.voices button.btn.md-primary-claim{display:block;margin:18px auto 0}
+body.has-mystery-claimed .md-primary-claim{display:none}
+body.has-mystery-claimed .claim-note{display:none}
+body.has-mystery-claimed .mystery-hint{display:none}
+
+/* v4 policy-compliant pricing */
+.offer .price-now{color:var(--gold);font-size:1.15em}
+.offer .price-list,.offer-sub .price-list{text-decoration:none;color:inherit}
+.btn-secondary-book{display:inline-block;margin-top:12px;font-size:14px;color:var(--ink);text-decoration:underline;background:none;border:0}
+.final .btn-secondary-book{display:block;text-align:center;margin:12px auto 0}

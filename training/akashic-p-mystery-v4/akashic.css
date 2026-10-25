@@ -1,0 +1,312 @@
+/* Shared styles for the Akashic Reading pages (variants a, b, c) */
+:root{--navy:#1c2944;--navy2:#2a3a5e;--gold:#b9893f;--gold2:#d7b072;--cream:#f8f2e7;--cream2:#efe5d3;--ink:#2b2f3a;--muted:#5d6475}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+h1,h2{font-family:'Fraunces',Georgia,serif;color:var(--navy);font-weight:500;line-height:1.15;text-wrap:balance}
+h2{font-size:clamp(26px,3.2vw,38px);margin-bottom:22px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.narrow{max-width:760px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+header{padding:12px 0 6px;text-align:center}
+header img{display:block;margin:0 auto;width:min(180px,50vw);height:auto;mix-blend-mode:multiply}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.btn{display:block;background:var(--gold);color:#fff;text-decoration:none;font-weight:600;font-size:18px;line-height:1.3;padding:16px 26px;border-radius:999px;box-shadow:0 6px 18px rgba(28,41,68,.18);text-align:center;transition:background .2s}
+.btn:hover{background:#a67a35}
+.under{font-size:14px;color:var(--muted);margin-top:8px;text-align:center}
+/* hero: mobile first, CTA above the fold at 390x844 */
+.hero{padding:6px 0 48px}
+.hero-grid{display:grid;gap:18px}
+.hero-top{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.avatar{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 18%;flex:none;border:2px solid var(--gold2)}
+.hero h1{font-size:30px;margin-bottom:12px}
+.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;background:var(--navy);color:#fff;border-radius:14px;padding:12px 16px;margin-bottom:14px}
+.price .now{font:600 34px/1 'Fraunces',serif}
+.price s{opacity:.7;font-size:17px}
+.price .lbl{font-size:14px;color:var(--gold2);flex-basis:100%}
+.facts{list-style:none;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:15px;color:var(--navy);font-weight:600;margin-bottom:14px}
+.facts li:before{content:"✓ ";color:var(--gold)}
+.hero .small{font-family:'Fraunces',serif;font-style:italic;color:var(--navy2);font-size:17px;line-height:1.45;border-left:3px solid var(--gold);padding-left:14px;margin-top:18px}
+.hero-photo{display:none}
+@media(min-width:900px){
+ header{padding:22px 0 10px} header img{width:220px}
+ .hero{padding:32px 0 80px}
+ .hero-grid{grid-template-columns:1.1fr .9fr;align-items:center;gap:64px}
+ .avatar{display:none}
+ .hero h1{font-size:52px;margin:10px 0 20px}
+ .price .now{font-size:44px}
+ .btn{display:inline-block;padding:17px 34px}
+ .under{text-align:left}
+ .hero-photo{display:block;border-radius:18px;overflow:hidden;aspect-ratio:665/1000}
+ .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
+}
+/* what you get */
+.get{background:#fff}
+.get ul{list-style:none;display:grid;gap:14px}
+.get li{background:var(--cream);border-radius:14px;padding:18px 20px 18px 52px;position:relative}
+.get li:before{content:"";position:absolute;left:22px;top:27px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+.get b{color:var(--navy)}
+@media(min-width:900px){.get ul{grid-template-columns:1fr 1fr}}
+/* steps */
+.steps{list-style:none;display:grid;gap:16px}
+.steps li{background:#fff;border-radius:16px;padding:22px 22px 22px 78px;position:relative;box-shadow:0 2px 10px rgba(28,41,68,.06)}
+.steps .n{position:absolute;left:22px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--gold);color:#fff;font-family:'Fraunces',serif;font-size:20px;display:flex;align-items:center;justify-content:center}
+.steps b{color:var(--navy)}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+/* proof */
+.proof{background:var(--navy);color:#e9e4da}
+.proof h2{color:#fff;text-align:center}
+.quotes{display:grid;gap:18px}
+.q{background:#fff;color:var(--ink);border-radius:16px;padding:24px 24px 20px;border-top:4px solid var(--gold)}
+.q p{font-family:'Fraunces',serif;font-size:19px;line-height:1.45;color:var(--navy);margin-bottom:12px}
+.q footer{font-size:14px;color:var(--muted)}
+.q footer b{color:var(--ink)}
+@media(min-width:900px){.quotes{grid-template-columns:1fr 1fr}}
+/* bio */
+.bio-grid{display:grid;gap:28px;align-items:center}
+.bio-photo{border-radius:18px;overflow:hidden;aspect-ratio:4/5;max-width:420px}
+.bio-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block}
+.bio p{font-size:18px;margin-bottom:16px}
+@media(min-width:900px){.bio-grid{grid-template-columns:.8fr 1.2fr;gap:64px}}
+/* final */
+.final{background:#fff;text-align:center}
+.final .btn{display:inline-block}
+.final .under{text-align:center}
+/* flash sale */
+.flashbar{background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));color:var(--navy);text-align:center;font-size:14px;font-weight:600;padding:7px 14px;letter-spacing:.02em}
+.flashbar b{text-transform:uppercase;letter-spacing:.14em;margin-right:6px}
+.price .tag{background:var(--gold);color:var(--navy);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:3px 9px;align-self:center}
+.claim{background:#fff;border-radius:16px;padding:14px;box-shadow:0 4px 18px rgba(28,41,68,.08);margin-bottom:14px}
+.claim form{display:grid;gap:8px}
+.claim input{font:inherit;font-size:16px;width:100%;padding:11px 14px;border:1px solid #d9cfbd;border-radius:10px;background:var(--cream);color:var(--ink)}
+.claim input:focus{outline:2px solid var(--gold2);border-color:var(--gold)}
+.claim button.btn{border:0;cursor:pointer;width:100%;font-family:inherit}
+.claim .err{color:#9b2c2c;font-size:14px;min-height:0}
+.claim .fine{font-size:13px;color:var(--muted);text-align:center}
+.claim h3{font-family:'Fraunces',serif;font-weight:500;color:var(--navy);font-size:21px;line-height:1.25;margin-bottom:6px}
+.claim .muted{font-size:15px;color:var(--muted);margin-bottom:12px}
+.clock{display:flex;gap:8px;justify-content:center;margin:4px 0 14px}
+.clock div{background:var(--navy);color:#fff;border-radius:10px;min-width:68px;padding:8px 6px;text-align:center}
+.clock b{display:block;font:600 28px/1.1 'Fraunces',serif}
+.clock span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2)}
+[hidden]{display:none!important}
+@media(min-width:900px){.claim{padding:20px}.claim form{grid-template-columns:1fr 1fr}.claim form .full{grid-column:1/-1}.claim .fine{text-align:left}}
+/* proof up top: endorsement strip + short quotes, all wording verbatim from Michelle's published pages */
+.endorse{display:flex;gap:12px;align-items:center;background:#fff;border-radius:14px;padding:10px 12px;margin-bottom:10px;box-shadow:0 2px 10px rgba(28,41,68,.06);border-left:4px solid var(--gold)}
+.endorse img{width:58px;height:58px;border-radius:50%;object-fit:cover;object-position:53% 22%;flex:none;border:2px solid var(--gold2)}
+.endorse blockquote{font-family:'Fraunces',serif;font-size:15px;line-height:1.35;color:var(--navy)}
+.endorse footer{font:13px/1.3 'Inter',sans-serif;color:var(--muted);margin-top:3px}
+.endorse footer b{color:var(--ink)}
+.trust{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:10px}
+.trust:before{content:"★ ";color:var(--gold)}
+.mini{display:grid;gap:8px;margin-bottom:14px}
+.mini blockquote{font-size:14px;line-height:1.4;color:var(--ink);border-left:2px solid var(--gold2);padding-left:10px}
+.mini blockquote span{display:block;font-size:12.5px;color:var(--muted);margin-top:1px}
+.mini .d-only{display:none}
+/* mobile: keep price + claim button above the fold at 390x844 with the proof above them */
+@media(max-width:899px){
+ header{padding:6px 0 2px} header img{width:150px}
+ .hero-top{gap:10px;margin-bottom:6px} .avatar{width:44px;height:44px} .hero .eyebrow{font-size:11px;letter-spacing:.12em}
+ .hero h1{font-size:28px;margin-bottom:10px}
+ .price{padding:8px 14px;margin-bottom:10px} .price .now{font-size:30px}
+ .claim{padding:10px} .claim form{grid-template-columns:1fr 1fr;gap:6px} .claim form .full{grid-column:1/-1}
+ .claim input{padding:9px 12px} .claim button.btn{padding:13px 20px}
+}
+@media(min-width:900px){
+ header{padding:12px 0 4px} .hero{padding-top:12px} .hero h1{font-size:48px;margin:6px 0 14px}
+ .endorse{padding:14px 16px;gap:16px}.endorse img{width:76px;height:76px}.endorse blockquote{font-size:18px}.endorse footer{font-size:14px}
+ .trust{font-size:15px;margin-bottom:14px}
+ .mini{grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:18px}.mini .d-only{display:block}
+}
+footer.site{padding:28px 20px 36px;text-align:center;font-size:13px;color:var(--muted);line-height:1.7}
+footer.site a{color:var(--muted)}
+footer.site .refund{max-width:640px;margin:0 auto 10px}
+/* flash clock from the first visit: active vs expired copy (body.is-expired is set by akashic.js) */
+.is-expired [data-when=active],body:not(.is-expired) [data-when=expired]{display:none!important}
+.price .lbl b{color:#fff;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.clock b{font-variant-numeric:tabular-nums}
+/* B: offer-first hero */
+.offer-hero{padding:6px 0 40px}
+.offer-hero .head{text-align:center;margin-bottom:12px}
+.offer-hero h1{font-size:27px;margin:4px 0 0}
+.deal{background:var(--navy);color:#fff;border-radius:18px;padding:14px 14px 16px;text-align:center;box-shadow:0 10px 30px rgba(28,41,68,.22);margin-bottom:16px}
+.deal .tag{display:inline-block;background:var(--gold);color:var(--navy);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;border-radius:999px;padding:3px 10px}
+.deal .amt{display:flex;justify-content:center;align-items:baseline;gap:10px;margin:6px 0 2px}
+.deal .now{font:600 46px/1 'Fraunces',serif}
+.deal s{opacity:.7;font-size:20px}
+.deal .sub{font-size:14px;color:var(--gold2);margin-bottom:8px}
+.deal .clock{margin:2px 0 12px}
+.deal .clock div{background:rgba(255,255,255,.1);min-width:74px}
+.deal .claim{margin:0;color:var(--ink);text-align:left}
+.offer-hero .proofstrip{max-width:760px;margin:0 auto}
+@media(min-width:900px){
+ .offer-hero{padding:8px 0 64px}
+ .offer-hero h1{font-size:44px}
+ .deal{max-width:760px;margin:0 auto 26px;padding:24px 28px 26px}
+ .deal .now{font-size:72px} .deal s{font-size:26px} .deal .sub{font-size:16px}
+ .deal .clock div{min-width:96px}.deal .clock b{font-size:38px}
+}
+@media(max-width:899px){
+ .offer-hero .claim form{grid-template-columns:1fr 1fr;gap:6px}
+ .deal .clock div{padding:5px 6px}.deal .clock b{font-size:24px}
+}
+/* B: value-first hero (Carole Crist's quote leads, deal follows) */
+.vb .lead-quote{display:flex;gap:12px;align-items:center;margin:2px 0 10px}
+.vb .lead-quote img{width:72px;height:72px;border-radius:50%;object-fit:cover;object-position:53% 22%;flex:none;border:3px solid var(--gold2);box-shadow:0 4px 14px rgba(28,41,68,.15)}
+.vb .lead-quote blockquote{font-family:'Fraunces',serif;font-size:17px;line-height:1.32;color:var(--navy)}
+.vb .lead-quote footer{font-size:12.5px;line-height:1.3;color:var(--muted);margin-top:4px}
+.vb .lead-quote footer b{color:var(--ink)}
+.vb .head{text-align:center;margin-bottom:8px}
+.vb .head .eyebrow{font-size:11px}
+.vb h1{font-size:25px}
+.vb .deal{padding:10px 12px 12px}
+.vb .deal .tag{font-size:10.5px;letter-spacing:.1em}
+.vb .deal .now{font-size:40px}
+.vb .deal .sub{margin-bottom:8px}
+.vb .deal .sub b{color:#fff;font-variant-numeric:tabular-nums}
+.vb .deal .claim .clock{margin:2px 0 10px}
+.vb .deal .claim .clock div{background:var(--navy)}
+.vb .d-only{display:none}
+.vb .proofstrip .facts{justify-content:center}
+.vb .small{font-family:'Fraunces',serif;font-style:italic;color:var(--navy2);font-size:17px;line-height:1.45;border-left:3px solid var(--gold);padding-left:14px;margin-top:14px}
+@media(min-width:900px){
+ .vb-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px 56px;align-items:center}
+ .vb .proofstrip{grid-column:1/-1;max-width:none}
+ .vb .lead-quote{flex-direction:column;align-items:flex-start;gap:18px;margin:10px 0 22px}
+ .vb .lead-quote img{width:132px;height:132px}
+ .vb .lead-quote blockquote{font-size:30px;line-height:1.25}
+ .vb .lead-quote footer{font-size:15px;margin-top:10px}
+ .vb .head{text-align:left}
+ .vb h1{font-size:40px}
+ .vb .d-only{display:block}.vb .m-only{display:none}
+ .vb .deal{margin:0;padding:22px 26px 24px}
+ .vb .deal .now{font-size:64px}
+ .vb .deal .tag{font-size:11px}
+}
+/* C: story-first hero */
+.story-hero{padding:6px 0 44px}
+.story-top{display:grid;grid-template-columns:118px 1fr;gap:14px;align-items:center;margin-bottom:10px}
+.story-photo{border-radius:16px;overflow:hidden;aspect-ratio:665/860;border:2px solid var(--gold2)}
+.story-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.story-hero h1{font-size:27px;margin:4px 0 0}
+.story-hero .lede{font-family:'Fraunces',serif;font-size:19px;color:var(--navy2);line-height:1.35;margin:4px 0 0}
+.story{font-size:15.5px;line-height:1.5;margin-bottom:12px}
+.story-hero .proofstrip{margin-top:22px}
+@media(min-width:900px){
+ .story-hero{padding:16px 0 70px}
+ .story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+ .story-top{display:block}
+ .story-top .story-photo{display:none}
+ .story-side .story-photo{aspect-ratio:665/1000;border-width:0;border-radius:18px}
+ .story-hero h1{font-size:50px}
+ .story-hero .lede{font-size:24px;margin:10px 0 16px}
+ .story{font-size:18px;margin-bottom:18px}
+}
+@media(max-width:899px){.story-side{display:none}}
+@media(max-width:899px){.flashbar{font-size:13px;padding:6px 10px;letter-spacing:0}.flashbar b{letter-spacing:.08em;margin-right:4px}}
+/* D: click-to-play video testimonials (poster until clicked, then youtube-nocookie) */
+.vid{margin:0 0 12px}
+.yt{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:var(--navy);box-shadow:0 6px 18px rgba(28,41,68,.18)}
+.yt button{all:unset;display:block;width:100%;height:100%;cursor:pointer}
+.yt img{width:100%;height:100%;object-fit:cover;display:block}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-play{position:absolute;left:50%;top:50%;width:68px;height:48px;margin:-24px 0 0 -34px;border-radius:14px;background:rgba(28,41,68,.85);transition:background .2s}
+.yt-play:after{content:"";position:absolute;left:28px;top:14px;border-style:solid;border-width:10px 0 10px 17px;border-color:transparent transparent transparent #fff}
+.yt button:hover .yt-play,.yt button:focus-visible .yt-play{background:var(--gold)}
+.yt button:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+.vid figcaption{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.35}
+.vid figcaption b{color:var(--ink)}
+.vid blockquote{font-family:'Fraunces',serif;font-size:15px;color:var(--navy);margin-bottom:2px}
+.vid-cta{margin-bottom:14px}
+.vid-lower{max-width:640px;margin:0 auto 24px}
+@media(min-width:900px){.vid blockquote{font-size:18px}.vid figcaption{font-size:14px}}
+/* Variants p + s: the "former First Lady of Florida" lead-in; p opens her video in a dialog */
+.fl-head{font-size:clamp(22px,2.6vw,30px);margin:4px 0 12px}
+.fl-open{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:14px;width:100%;margin:4px 0 10px;padding:16px 18px;border-radius:14px;background:var(--navy);color:#fff;font-family:'Fraunces',Georgia,serif;font-size:clamp(20px,2.4vw,26px);line-height:1.2;cursor:pointer;box-shadow:0 6px 18px rgba(28,41,68,.18);transition:background .2s}
+.fl-open:hover{background:var(--navy2)}
+.fl-open:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.fl-play{flex:none;position:relative;width:52px;height:52px;border-radius:50%;background:var(--gold)}
+.fl-play:after{content:"";position:absolute;left:21px;top:16px;border-style:solid;border-width:10px 0 10px 16px;border-color:transparent transparent transparent #fff}
+.fl-quote{margin-bottom:14px}
+.fl-modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:12px;background:rgba(15,22,38,.82)}
+.fl-modal[hidden]{display:none}
+.fl-dialog{width:min(960px,100%,calc((100vh - 90px) * 16 / 9));width:min(960px,100%,calc((100dvh - 90px) * 16 / 9))}
+.fl-bar{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.fl-title{flex:1;color:#fff;font-size:14px;line-height:1.3}
+.fl-close{all:unset;flex:none;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:30px;line-height:44px;text-align:center;cursor:pointer}
+.fl-close:hover,.fl-close:focus-visible{background:var(--gold)}
+.fl-close:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.fl-frame{position:relative;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000}
+.fl-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+html.fl-lock{overflow:hidden}
+/* p + s: above the fold on 390x844 and 1280x800. Portrait, eyebrow, headline, the first-time offer, one button, then Carole Crist. */
+.atf{padding:4px 0 36px}
+.atf-grid{max-width:1120px;margin:0 auto;padding:0 20px;display:grid;gap:16px}
+.atf-grid>*{min-width:0}
+.atf-photo{border-radius:14px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 8px 24px rgba(28,41,68,.14)}
+.atf-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
+.atf .eyebrow{margin-bottom:8px}
+.atf h1{font-size:30px;margin-bottom:12px}
+.offer{font-family:'Fraunces',Georgia,serif;color:var(--navy);font-size:24px;line-height:1.2;font-weight:600}
+.offer [data-price]{color:var(--gold);white-space:nowrap}
+.offer-sub{font-size:15px;color:var(--muted);margin:6px 0 14px}
+.offer-reg{font-size:14px;color:var(--muted);margin:-8px 0 14px}
+.offer-reg [data-price]{color:inherit}
+.atf .btn{display:block}
+/* Carole Crist card: quote, name + title, then the video (s: inline poster, p: a button that opens the dialog) */
+.atf-carole{margin:16px 0 0;background:#fff;border-radius:14px;padding:14px 16px;border-left:4px solid var(--gold);box-shadow:0 2px 10px rgba(28,41,68,.06)}
+.atf-carole blockquote{font-family:'Fraunces',Georgia,serif;font-size:17px;line-height:1.35;color:var(--navy)}
+.atf-carole figcaption{font-size:14px;line-height:1.3;color:var(--muted);margin-top:8px}
+.atf-carole figcaption b{display:block;font-size:16px;color:var(--navy)}
+.atf-carole .fl-open{width:auto;margin:10px 0 0;padding:9px 16px 9px 10px;gap:10px;font-family:'Inter',system-ui,sans-serif;font-weight:600;font-size:15px;border-radius:999px}
+.atf-carole .fl-play{width:30px;height:30px}
+.atf-carole .fl-play:after{left:12px;top:9px;border-width:6px 0 6px 10px}
+.atf-carole.has-vid{display:grid;grid-template-columns:150px 1fr;grid-template-areas:"vid quote" "cap cap";gap:8px 14px;align-items:center}
+.atf-carole.has-vid .yt{grid-area:vid;border-radius:10px;box-shadow:none}
+.atf-carole.has-vid blockquote{grid-area:quote}
+.atf-carole.has-vid figcaption{grid-area:cap;margin-top:0}
+.atf-carole.has-vid .yt-play{width:46px;height:32px;margin:-16px 0 0 -23px;border-radius:9px}
+.atf-carole.has-vid .yt-play:after{left:19px;top:9px;border-width:7px 0 7px 12px}
+@media(min-width:900px){
+ .atf{padding:10px 0 56px}
+ .atf-grid{grid-template-columns:300px 1fr;align-items:center;gap:48px}
+ .atf .eyebrow{margin-bottom:6px}
+ .atf h1{font-size:42px;margin:0 0 16px}
+ .offer{font-size:28px}
+ .offer-sub{font-size:17px;margin:6px 0 18px}
+ .offer-reg{margin:-10px 0 16px}
+ .atf .btn{display:inline-block}
+ .atf-carole{margin-top:22px;max-width:640px;padding:16px 20px}
+ .atf-carole blockquote{font-size:19px}
+ .atf-carole.has-vid{grid-template-columns:200px 1fr;grid-template-areas:"vid quote" "vid cap";align-items:start}
+ .atf-carole.has-vid .yt{align-self:center}
+}
+@media(max-width:899px){
+ /* phone: the portrait sits beside the eyebrow + headline; the next section starts at or below 844px */
+ .atf{min-height:calc(100vh - 56px);min-height:calc(100svh - 56px);padding-bottom:24px}
+ .atf-grid{grid-template-columns:150px minmax(0,1fr);column-gap:14px;row-gap:0;align-items:start}
+ .atf-copy{display:contents}
+ .atf-photo{grid-row:1/3;grid-column:1;align-self:start;width:150px;max-width:100%}
+ .atf-photo img{max-width:100%}
+ .atf .eyebrow{grid-column:2;font-size:11px;letter-spacing:.14em;margin:2px 0 6px}
+ .atf h1{grid-column:2;font-size:25px;margin-bottom:0}
+ .atf-copy>:not(.eyebrow):not(h1){grid-column:1/-1}
+ .offer{font-size:20px;margin-top:14px}
+ .offer-sub{margin:6px 0 10px}
+ .offer-reg{margin:-5px 0 12px}
+ .atf-carole{margin-top:12px;padding:12px 14px}
+ .atf-carole blockquote{font-size:17px}
+ .atf-carole figcaption{font-size:14px}
+ .atf-carole figcaption b{font-size:16px}
+ .atf-carole .fl-open{font-size:16px}
+ .atf-carole.has-vid{grid-template-columns:1fr;grid-template-areas:"vid" "quote" "cap";gap:10px}
+ .atf-carole.has-vid .yt{width:100%}
+}
+/* p + s: the proof that used to crowd the hero now has its own section under it */
+.voices{padding:40px 0 56px;border-top:1px solid var(--cream2)}
+.voices .fl-open,.voices .fl-head{margin-top:0}
+.voices .mini{margin-bottom:22px}
+.voices .btn{display:block;max-width:420px;margin:0 auto}
+.bio-note{font-family:'Fraunces',serif;font-style:italic;color:var(--navy2);font-size:17px;line-height:1.45;border-left:3px solid var(--gold);padding-left:14px}
+.final .offer{margin-bottom:14px}
+.final .offer-reg{margin:-6px 0 14px;text-align:center}
+@media(min-width:900px){.voices{padding:56px 0 64px}.voices .mini{grid-template-columns:repeat(3,1fr)}.voices .btn{display:inline-block}.voices .narrow{text-align:left}}
